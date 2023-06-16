@@ -9,11 +9,13 @@
 /**
  * 
  */
+
 UCLASS()
 class LEARNINGCPP_API UMyGameInstanceSubsystem : public UGameInstanceSubsystem
 {
 	GENERATED_BODY()
 public:
+	static UMyGameInstanceSubsystem* GetMyGame();
 	// Begin USubsystem
 	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
 	virtual void Deinitialize() override;

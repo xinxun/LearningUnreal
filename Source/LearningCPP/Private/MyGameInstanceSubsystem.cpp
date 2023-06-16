@@ -17,13 +17,18 @@ void UMyGameInstanceSubsystem::Deinitialize()
 	UE_LOG(LogTemp, Warning, TEXT("---------UMyGameInstanceSubsystem::Deinitialize()--------------"));
 }
 // End USubsystem
-/*
+
 void UMyGameInstanceSubsystem::Test()
 {
 	UE_LOG(LogTemp, Warning, TEXT("-----UMyGameInstanceSubsystem::Test()----"));
-}*/
+}
 
 void UMyGameInstanceSubsystem::BluePrintTest()
 {
 	UE_LOG(LogTemp, Warning, TEXT("BBBB----UMyGameInstanceSubsystem::BluePrintTest()----BBBB"));
+}
+
+UMyGameInstanceSubsystem* UMyGameInstanceSubsystem::GetMyGame()
+{
+	return GWorld->GetGameInstance()->GetSubsystem<UMyGameInstanceSubsystem>();
 }
