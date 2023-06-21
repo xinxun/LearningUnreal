@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "MySceneComponent.h"
 #include "MyActor.generated.h"
 
 UCLASS()
@@ -24,5 +25,9 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY()
+	TObjectPtr<class UMyActorComponent> MyActorComponent;
+	TObjectPtr<class UMySceneComponent> MySceneComponent;
 
 };
